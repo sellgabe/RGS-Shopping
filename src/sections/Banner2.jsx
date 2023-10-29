@@ -14,7 +14,7 @@ const Banner2 = () => {
             match them freely.
           </p>
           <button className="bg-black text-white text-lg py-2 font-semibold mt-2 w-[110px]">
-            <Link to="/categories">SHOP NOW</Link>
+            <Link to="/RGS-Shopping/categories">SHOP NOW</Link>
           </button>
         </div>
         <div className="w-[50%] text-center max-sm:hidden">

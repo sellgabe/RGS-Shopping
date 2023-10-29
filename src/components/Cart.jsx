@@ -155,7 +155,7 @@ const Cart = () => {
           </div>
           <div className="flex flex-col w-full gap-1">
             <Link
-              to="/categories"
+              to="/RGS-Shopping/categories"
               className="border-solid border-[2px] bg-black border-black text-white hover:bg-white hover:text-black transition-all duration-250 text-xl px-4 py-2 font-semibold flex justify-center"
               onClick={() => setShowCart(false)}
             >

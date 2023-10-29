@@ -7,8 +7,7 @@ import { useGlobalContext } from '../context';
 import { useParams } from 'react-router-dom';
 
 const Categories = () => {
-  const { handleProductClick, navigate, loading, setLoading } =
-    useGlobalContext();
+  const { handleProductClick, navigate, setLoading } = useGlobalContext();
   const { category } = useParams();
 
   const [selectedCategory, setSelectedCategory] = useState(null);

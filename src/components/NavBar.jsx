@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import hamburger from '../assets/images/hamburger.svg';
 import icon from '../assets/images/rgsblackout.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,9 +6,15 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Cart from './Cart';
 import Hamburger from './Hamburger';
 import { useGlobalContext } from '../context';
+import { useEffect } from 'react';
 
 const NavBar = () => {
   const { setShowCart, setShowMobileNav, cartItems } = useGlobalContext();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <nav className="py-6 sticky top-0 z-10 w-full border-b-[2px] bg-white border-gray-200 shadow-sm">
@@ -24,17 +30,16 @@ const NavBar = () => {
             <li className="hover:underline">
               <Link to="/categories/products">PRODUCTS</Link>
             </li>
-            <li className="cursor-pointer relative flex items-center">
+            <li
+              className="cursor-pointer relative flex items-center"
+              onClick={() => setShowCart((prevState) => !prevState)}
+            >
               <FontAwesomeIcon
                 icon={faCartShopping}
-                size="md"
+                size="sm"
                 style={{ color: 'black' }}
-                onClick={() => setShowCart((prevState) => !prevState)}
               />
-              <div
-                className="w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer"
-                onClick={() => setShowCart((prevState) => !prevState)}
-              >
+              <div className="w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer">
                 {cartItems.length}
               </div>
             </li>
