@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700&display=swap');
+
+@tailwind base;
+html {
+  scroll-behavior: smooth;
+}
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 19px;
+  }
+
+  .filter-btn {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    padding: 1px 1rem;
+  }
+
+  .filter-btn:hover {
+    font-weight: bold;
+    border: black 2px solid;
+    transition: all ease-in;
+    transition-duration: 150ms;
+  }
+
+  .transition {
+    transition: all 0.4s ease;
+  }
+}
