@@ -37,7 +37,7 @@ const AppProvider = ({ children }) => {
 
   const handleProductClick = (productId) => {
     const product = products.find((product) => product.id === productId);
-    navigate(`/RGS-Shopping/categories/products/${product.id}`);
+    navigate(`/categories/products/${product.id}`);
     setSelectedProduct(product);
     window.scrollTo(0, 0);
   };

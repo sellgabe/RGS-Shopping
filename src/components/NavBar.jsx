@@ -39,7 +39,11 @@ const NavBar = () => {
                 size="sm"
                 style={{ color: 'black' }}
               />
-              <div className="w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer">
+              <div
+                className={`w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer ${
+                  cartItems.length < 1 ? 'hidden' : ''
+                }`}
+              >
                 {cartItems.length}
               </div>
             </li>
@@ -54,7 +58,9 @@ const NavBar = () => {
                 onClick={() => setShowCart((prevState) => !prevState)}
               />
               <div
-                className="w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer"
+                className={`w-5 h-5 bg-red-500 text-white flex items-center justify-center rounded-full text-sm mb-6 cursor-pointer ${
+                  cartItems.length < 1 ? 'hidden' : ''
+                }`}
                 onClick={() => setShowCart((prevState) => !prevState)}
               >
                 {cartItems.length}

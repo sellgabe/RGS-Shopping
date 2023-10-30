@@ -87,7 +87,7 @@ const Cart = () => {
         </div>
 
         <div className="h-[70%] overflow-y-scroll">
-          {cartItems &&
+          {cartItems.length > 0 ? (
             cartItems.map((item) => {
               return (
                 <div
@@ -98,11 +98,11 @@ const Cart = () => {
                     <img
                       src={item.image}
                       alt="product"
-                      className=" w-[100px] h-[100px]"
+                      className="w-[100px] h-[100px]"
                     />
                   </div>
                   <div className="w-[50%] h-full px-2 py-6 flex flex-col justify-between">
-                    <p className="font-semibold flex justify-between ">
+                    <p className="font-semibold">
                       <span
                         style={{
                           display: '-webkit-box',
@@ -122,7 +122,7 @@ const Cart = () => {
                       >
                         -
                       </button>
-                      <p className="border-solid border-y-[2px] text-[1rem]  border-black p-1 px-3">
+                      <p className="border-solid border-y-[2px] text-[1rem] border-black p-1 px-3">
                         {item.quantity}
                       </p>
                       <button
@@ -146,7 +146,17 @@ const Cart = () => {
                   </div>
                 </div>
               );
-            })}
+            })
+          ) : (
+            <div className="flex flex-col gap-2 justify-center items-center">
+              <div className="text-3xl">Your cart is currently empty</div>
+              <div className="text-lg text-gray-500">
+                Before you proceed to checkout you must add some products to
+                your shopping cart. You will find a lot of interesting products
+                on our "Product" page.
+              </div>
+            </div>
+          )}
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex justify-between w-full mt-2 items-center">
@@ -155,13 +165,13 @@ const Cart = () => {
           </div>
           <div className="flex flex-col w-full gap-1">
             <Link
-              to="/RGS-Shopping/categories"
+              to="/categories"
               className="border-solid border-[2px] bg-black border-black text-white hover:bg-white hover:text-black transition-all duration-250 text-xl px-4 py-2 font-semibold flex justify-center"
               onClick={() => setShowCart(false)}
             >
               CONTINUE SHOPPING
             </Link>
-            <button className="text-white border-2 bg-red-800 hover:border-red-800 hover:text-red-800 hover:bg-white transition-all duration-250 text-xl px-4 py-2 font-semibold">
+            <button className="text-white border-[2px] bg-red-800 border-red-800 hover:text-red-800 hover:bg-white transition-all duration-250 text-xl px-4 py-2 font-semibold">
               CHECKOUT
             </button>
           </div>

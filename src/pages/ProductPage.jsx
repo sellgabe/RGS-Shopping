@@ -108,7 +108,7 @@ const ProductPage = () => {
                 </div>
                 <p>${parseFloat(selectedProduct.price).toFixed(2)}</p>
               </div>
-              <div className="flex justify-between font-semibold gap-4 text-lg max-md:flex-col">
+              <div className="flex justify-between font-semibold gap-4 text-lg max-md:flex-col max-md:gap-1">
                 <button
                   className="border-solid border-[2px] bg-black border-black text-white hover:bg-white hover:text-black transition-all duration-250 px-4 py-3 w-[50%] max-md:w-full"
                   onClick={() => {
@@ -119,7 +119,7 @@ const ProductPage = () => {
                   ADD TO CART
                 </button>
                 <button
-                  className="text-white border-2 bg-red-800 hover:border-red-800 hover:text-red-800 hover:bg-white transition-all duration-250 px-4 py-3 w-[50%] max-md:w-full"
+                  className="text-white border-2 bg-red-800 border-red-800 hover:text-red-800 hover:bg-white transition-all duration-250 px-4 py-3 w-[50%] max-md:w-full"
                   onClick={() => handleBuyNowButton(selectedProduct.id)}
                 >
                   BUY NOW
