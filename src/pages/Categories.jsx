@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { faLessThan } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Trending from '../sections/Trending';
 import fakeStore from '../apis/fakeStore';
 import { useGlobalContext } from '../context';
@@ -48,17 +46,7 @@ const Categories = () => {
     <>
       <div className="container font-blinker mb-12">
         <div className="mt-8">
-          <div className="flex items-center">
-            <a href="/">
-              <FontAwesomeIcon
-                icon={faLessThan}
-                size="sm"
-                style={{ color: 'black' }}
-              />
-              <span className="ml-1.5">Home</span>
-            </a>
-          </div>
-          <div className="flex justify-center items-center px-2 gap-8 mt-4 mb-8 max-sm:flex-col max-sm:gap-2">
+          <div className="flex justify-evenly  items-center px-2 gap-8 mt-4 mb-8 max-sm:flex-col max-sm:gap-2">
             <button
               className={`filter-btn ${
                 selectedCategory === 'all' ? 'font-semibold border-black' : ''

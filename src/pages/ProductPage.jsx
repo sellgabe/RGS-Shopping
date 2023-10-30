@@ -1,9 +1,11 @@
 import Trending from '../sections/Trending';
 import product1 from '../assets/images/product1.jpg';
 import { useGlobalContext } from '../context';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Notify from '../components/Notify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLessThan } from '@fortawesome/free-solid-svg-icons';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -65,6 +67,13 @@ const ProductPage = () => {
       }
     }
   }, [productId, products, setSelectedProduct]);
+
+  <div className="flex items-center">
+    <a href="/">
+      <FontAwesomeIcon icon={faLessThan} size="sm" style={{ color: 'black' }} />
+      <span className="ml-1.5">Home</span>
+    </a>
+  </div>;
 
   return (
     <>
