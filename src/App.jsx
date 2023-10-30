@@ -2,7 +2,7 @@ import NavBar from './components/NavBar';
 import Categories from './pages/Categories';
 import FrontPage from './pages/FrontPage';
 import ProductPage from './pages/ProductPage';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Newsletter from './sections/Newsletter';
 import Footer from './sections/Footer';
 
