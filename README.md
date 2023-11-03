@@ -1,8 +1,15 @@
-# React + Vite
+# RGS Shopping Website
+### A Shopping Website created in React using FakeStore API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Screenshots
+![ss1](https://github.com/sellgabe/rgs-shopping/assets/41419376/cf205ff0-0159-4b39-bf9e-6a723050ca05)
 
-Currently, two official plugins are available:
+![ss2](https://github.com/sellgabe/rgs-shopping/assets/41419376/350f1615-3328-4ad1-8f88-06fc871e330e)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![ss3](https://github.com/sellgabe/rgs-shopping/assets/41419376/23dff42d-1443-438f-908f-617d49a2a17a)
+
+![ss4](https://github.com/sellgabe/rgs-shopping/assets/41419376/97ed2109-791c-47d2-9a0a-605b347283ae)
+
+
+## Languages
+ReactJS, Tailwind CSS
