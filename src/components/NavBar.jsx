@@ -28,7 +28,7 @@ const NavBar = () => {
               <Link to="/categories">CATEGORIES</Link>
             </li>
             <li className="hover:underline">
-              <Link to="/categories/products">PRODUCTS</Link>
+              <Link to="/categories/products/1">PRODUCTS</Link>
             </li>
             <li
               className="cursor-pointer relative flex items-center"

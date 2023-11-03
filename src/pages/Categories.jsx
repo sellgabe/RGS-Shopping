@@ -13,25 +13,20 @@ const Categories = () => {
 
   const fetchCategoryProducts = async (url) => {
     try {
-      const res = await fakeStore.get(`/${url}`);
-      res.data ? setCategoryProducts(res.data) : setCategoryProducts([]);
-      setLoading(false);
+      const res = await fakeStore.get(url);
+      setCategoryProducts(res.data);
     } catch (error) {
-      console.log(error.response);
-      setLoading(false);
+      console.error(error);
     }
   };
 
   const handleCategoryClick = (category) => {
-    if (category == 'all') {
-      fetchCategoryProducts('products');
-      setSelectedCategory('all');
+    if (category === 'all') {
+      fetchCategoryProducts('/products');
     } else {
-      fetchCategoryProducts(`products/category/${category}`);
-      setSelectedCategory(category);
+      fetchCategoryProducts(`/products/category/${category}`);
     }
-
-    navigate(`/categories/${category}`);
+    setSelectedCategory(category);
   };
 
   useEffect(() => {

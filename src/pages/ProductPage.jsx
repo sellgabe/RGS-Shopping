@@ -56,7 +56,6 @@ const ProductPage = () => {
   useEffect(() => {
     if (!productId) {
       const product = products.find((product) => product.id === 1);
-      navigate('/categories/products/1');
       setSelectedProduct(product);
       setProductQuantity(1);
     } else {
@@ -66,7 +65,7 @@ const ProductPage = () => {
         setProductQuantity(1);
       }
     }
-  }, [productId, products, setSelectedProduct]);
+  }, []);
 
   <div className="flex items-center">
     <a href="/">
